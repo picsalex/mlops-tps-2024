@@ -60,7 +60,9 @@ docker-compose up mysql-db
 
 # Connect to it
 docker exec -ti mlops-tps-2024-mysql-db-1 /bin/bash
-mysql -u root -p <mysql-root-password>
+mysql -u root -p
+
+# Type your root password
 
 # Create the mlflow database
 create database mlflow;
