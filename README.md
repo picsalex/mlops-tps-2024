@@ -77,6 +77,9 @@ You can now run the complete stack:
 ```bash
 #path/to/this/project
 docker-compose up
+
+# Setup your ZenML stack
+sh stack/setup-local-stack.sh
 ```
 
 Don't forget to create an `mlflow` bucket on MinIO.
