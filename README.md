@@ -72,6 +72,8 @@ exit
 exit
 ```
 
+Then, go to `src/config` cand copy-paste the `.env.dist` file, rename it `.env`. You can then fill all the `<fill-here>` tokens appropriatly.
+
 You can now run the complete stack:
 
 ```bash
