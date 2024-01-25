@@ -15,7 +15,16 @@ Please feel free to ask questions, as this project involves numerous skills that
 
 For this project, we'll be using Python 3.11:  https://www.linuxcapable.com/how-to-install-python-3-11-on-ubuntu-linux/
 
-### B. Poetry
+### B. Docker
+
+Install Docker: https://docs.docker.com/engine/install/ubuntu/
+
+### C. Install your IDE
+
+We highly recommend using PyCharm (Community or Professional Edition) for this course: https://www.jetbrains.com/fr-fr/pycharm/download/other.html
+
+
+### D. Poetry
 
 Install Poetry by following this guide:  https://medium.com/@mronakjain94/comprehensive-guide-to-installing-poetry-on-ubuntu-and-managing-python-projects-949b49ef4f76
 
@@ -26,14 +35,6 @@ Then, activate the Poetry environment:
 poetry install
 poetry shell
 ```
-
-### C. Docker
-
-Install Docker: https://docs.docker.com/engine/install/ubuntu/
-
-### D. Install your IDE
-
-We highly recommend using PyCharm (Community or Professional Edition) for this course: https://www.jetbrains.com/fr-fr/pycharm/download/other.html
 
 ### E. Enable black
 
@@ -49,6 +50,14 @@ If you haven't already, create your accounts at:
 - GitHub: https://github.com/join
 
 ## 2. Start the stack 🚀
+
+First, go to `src/config` cand copy-paste the `.env.dist` file, rename it `.env`:
+
+```bash
+cp src/config/.env.dist src/config/.env
+```
+
+You can then fill all the `<fill-here>` tokens appropriatly, the last one (`HUGGINGFACE_TOKEN`) is a personnal access token you can [create here](https://huggingface.co/settings/tokens). It will be used when deploying our trained model on HuggingFace.
 
 Now, let's start the local stack. First, we need to create the `mlflow` schema for MLflow to register our metadata store.
 
@@ -74,9 +83,7 @@ exit
 exit
 ```
 
-Then, go to `src/config` cand copy-paste the `.env.dist` file, rename it `.env`. You can then fill all the `<fill-here>` tokens appropriatly.
-
-You can now run the complete stack:
+You can now run the complete stack and register the ZenML stack:
 
 ```bash
 #path/to/this/project
@@ -86,7 +93,7 @@ docker-compose up
 sh stack/setup-local-stack.sh
 ```
 
-Don't forget to create an `mlflow` bucket on MinIO.
+Finally, create an `mlflow` bucket on MinIO.
 
 ## 3. Quick-access URLs ⚡
 
