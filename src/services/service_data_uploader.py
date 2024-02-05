@@ -138,12 +138,12 @@ class DataUploaderService:
         )
 
         json_path = f"{dataset_name}/annotations/{unique_id}.json"
-        item["litter"]["image_path"] = image_path
+        item["objects"]["image_path"] = image_path
 
         self._upload_json(
             bucket_name=bucket_name,
             json_path=json_path,
-            data=item["litter"],
+            data=item["objects"],
             metadata=metadata,
         )
 

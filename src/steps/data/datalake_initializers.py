@@ -102,9 +102,10 @@ def data_source_list_initializer() -> DataSourceList:
     return DataSourceList(
         [
             HuggingFaceDataSource(
-                dataset_name="<fill-here>",
+                dataset_name="hf-vision/hardhat",
                 label_map={
-                    # class_id: "<fill-here>",
+                    0: "helmet",
+                    1: "head",
                 },
             )
         ]
