@@ -1,5 +1,5 @@
 project:
-  name: mlops-hardshat
+  name: mlops-hardhat
 
 model:
   key: value
