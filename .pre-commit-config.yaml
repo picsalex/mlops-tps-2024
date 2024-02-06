@@ -17,7 +17,7 @@ repos:
 #       args: [--check]
 
 - repo: https://github.com/ambv/black
-  rev: stable
+  rev: 24.1.1
   hooks:
     - id: black
       types: [python]
