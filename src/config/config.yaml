@@ -8,4 +8,4 @@ evaluation:
   key: value
 
 pipeline:
-  name: datalake
+  name: experiment

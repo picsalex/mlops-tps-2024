@@ -7,10 +7,11 @@ from src.steps.data.datalake_initializers import (
     data_source_list_initializer,
     minio_client_initializer,
 )
-# from src.steps.data.dataset_preparators import (
-#     dataset_creator,
-#     dataset_to_yolo_converter,
-# )
+from src.steps.data.dataset_preparators import (
+    dataset_creator,
+    datasource_extractor,
+    dataset_to_yolo_converter,
+)
 # from src.steps.training.model_appraisers import model_appraiser
 # from src.steps.training.model_evaluators import model_evaluator
 # from src.steps.training.model_trainers import (
@@ -29,8 +30,13 @@ def gitflow_experiment_pipeline(cfg: str) -> None:
     """
     pipeline_config = OmegaConf.to_container(OmegaConf.create(cfg))
 
-    bucket_client = minio_client_initializer()
+    minio_client = minio_client_initializer()
     data_source_list = data_source_list_initializer()
+
+    bucket_name = "data-sources"
+
+    # Extract the data sources to a folder
+    datasource_extractor(data_source_list, minio_client, bucket_name)
 
     # Prepare/create the dataset
     # dataset = dataset_creator(
