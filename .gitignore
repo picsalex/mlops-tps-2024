@@ -167,6 +167,7 @@ cython_debug/
 local-experiment-pipeline/
 .ruff_cache/
 datasets
+datasets.7z
 src/experiment.py
 
 # ultralytics
@@ -175,3 +176,6 @@ runs/
 
 # Hydra
 outputs/
+
+# Other
+setup.txt
