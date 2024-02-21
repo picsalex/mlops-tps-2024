@@ -65,10 +65,10 @@ Now, let's start the local stack. First, we need to create the `mlflow` schema f
 #path/to/this/project
 
 # Start the mysql container
-docker-compose up mysql-db
+sudo docker-compose up mysql-db
 
 # Connect to it
-docker exec -ti mlops-tps-2024-mysql-db-1 /bin/bash
+sudo docker exec -ti mlops-tps-2024-mysql-db-1 /bin/bash
 mysql -u root -p
 
 # Type your root password
@@ -87,7 +87,7 @@ You can now run the complete stack and register the ZenML stack:
 
 ```bash
 #path/to/this/project
-docker-compose up
+docker compose up
 
 # Setup your ZenML stack
 bash stack/setup-local-stack.sh

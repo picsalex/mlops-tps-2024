@@ -1,11 +1,14 @@
 project:
-  name: <fill-here>
+  name: river-clean
 
 model:
-  key: value
+  img_size: 640
+  batch_size: 8
+  nb_epochs: 1
+  device: 1
 
 evaluation:
   key: value
 
 pipeline:
-  name: <fill-here>
+  name: experiment

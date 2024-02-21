@@ -102,9 +102,13 @@ def data_source_list_initializer() -> DataSourceList:
     return DataSourceList(
         [
             HuggingFaceDataSource(
-                dataset_name="<fill-here>",
+                dataset_name="kili-technology/plastic_in_river",
                 label_map={
-                    # class_id: "<fill-here>",
+                    # class_id: "class_name",
+                    0: "PLASTIC_BAG",
+                    1: "PLASTIC_BOTTLE",
+                    2: "OTHER_PLASTIC_WASTE",
+                    3: "NOT_PLASTIC_WASTE",
                 },
             )
         ]
