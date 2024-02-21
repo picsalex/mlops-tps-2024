@@ -2,11 +2,10 @@ project:
   name: river-clean
 
 model:
-  key: value
   img_size: 640
-  batch_size: 16
-  nb_epochs: 10
-  device: "cpu"
+  batch_size: 9
+  nb_epochs: 1
+  device: 1
 
 evaluation:
   key: value
